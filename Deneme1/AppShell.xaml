@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Deneme1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Deneme1"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Deneme1"
+    FlyoutBehavior="Flyout">
+
+    <FlyoutItem Title="Ana Sayfa" Icon="home.png">
+        <ShellContent Title="Ana Sayfa"
+                      ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Kredi Hesaplama" Icon="calculator.png">
+        <ShellContent Title="Kredi Hesaplama"
+                      ContentTemplate="{DataTemplate local:KrediHesaplama}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Renk Seçici" Icon="calculator.png">
+        <ShellContent Title="Renk Seçici"
+                   ContentTemplate="{DataTemplate local:RenkSecici}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Vücut Kitle İndeksi" Icon="calculator.png">
+        <ShellContent Title="Vücut Kitle İndeksi"
+               ContentTemplate="{DataTemplate local:VucutKitleIndeksi}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Yapılacaklar Listesi" Icon="calculator.png">
+        <ShellContent Title="Yapılacaklar Listesi"
+            ContentTemplate="{DataTemplate local:YapilacaklarListesi}" />
+    </FlyoutItem>
+
+
+
+
+</Shell>

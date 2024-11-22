@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Deneme1.VucutKitleIndeksi"
+             Title="Vücut Kitle Indeksi"
+             BackgroundColor="LightPink">
+
+    <VerticalStackLayout Spacing="20">
+
+        <!-- Formül -->
+        <Label Text="VKİ = kg / (boy * boy)" TextColor="Purple"
+                   FontSize="40"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start" />
+
+        <!-- Kilo Seçimi -->
+        <StackLayout>
+            <Label Text="Kilonuzu Girin (kg)" TextColor="Black"
+                       FontSize="25"
+                       FontAttributes="Bold"
+                       VerticalOptions="Start" />
+            <HorizontalStackLayout Spacing="10">
+                <!-- Kilo TextBox -->
+                <Entry x:Name="KiloEntry" BackgroundColor="Purple"
+                           HeightRequest="50"
+                       WidthRequest="500"
+                           Placeholder="Kilo"
+                           Keyboard="Numeric"
+                           VerticalOptions="Center"
+                            />
+
+                <!-- Kilo Slider -->
+                <Slider x:Name="KiloSlider" ThumbColor="Purple"
+                            Minimum="20"
+                            Maximum="200"
+                            HorizontalOptions="FillAndExpand"
+                            ValueChanged="OnKiloSliderValueChanged"
+                            WidthRequest="500"
+                          />
+            </HorizontalStackLayout>
+        </StackLayout>
+
+        <!-- Boy Seçimi -->
+        <StackLayout>
+            <Label Text="Boyunuzu Girin (metre)"
+                       FontSize="25"
+                       FontAttributes="Bold"
+                       VerticalOptions="Start" />
+            <HorizontalStackLayout Spacing="10">
+                <!-- Boy TextBox -->
+                <Entry x:Name="BoyEntry" BackgroundColor="Purple"
+                       WidthRequest="500"
+                           Placeholder="Boy"
+                           Keyboard="Numeric"
+                           VerticalOptions="Center"
+                           />
+
+                <!-- Boy Slider -->
+                <Slider x:Name="BoySlider" ThumbColor="Purple"
+                            Minimum="0.5"
+                            Maximum="2.5"
+                            HorizontalOptions="FillAndExpand"
+                            ValueChanged="OnBoySliderValueChanged" 
+                            WidthRequest="500" />
+            </HorizontalStackLayout>
+        </StackLayout>
+
+        <!-- Hesaplama Sonuçları -->
+        <Label x:Name="SonucLabel"
+                   Text="Vücut Kitle İndeksiniz:"
+                   FontSize="25"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center" />
+
+        <Label x:Name="DurumLabel"
+                   FontSize="25"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   TextColor="Red" />
+
+        <!-- Hesapla Butonu -->
+        <Button x:Name="HesaplaButton"
+                    Text="Hesapla"
+                    BackgroundColor="Purple"
+                    TextColor="White"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Clicked="OnHesaplaClicked" />
+    </VerticalStackLayout>
+</ContentPage>
+

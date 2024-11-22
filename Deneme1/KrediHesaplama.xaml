@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Deneme1.KrediHesaplama"
+             Title="KrediHesaplama">
+
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="Pink">
+            <VerticalStackLayout Padding="20" Spacing="20" >
+
+                
+                <Label Text="Kredi Hesaplama" TextColor="Purple"
+                       FontSize="40"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+
+               
+                <Picker x:Name="KrediTuruPicker"
+                        Title="Kredi Türü Seçin" TitleColor="Purple" 
+                        ItemsSource="{Binding KrediTurleri}" />
+
+               
+                <Entry x:Name="TutarEntry"
+                       Placeholder="Kredi Tutarı (TL)" 
+                       Keyboard="Numeric" />
+
+               
+                <Entry x:Name="FaizOraniEntry"
+                       Placeholder="Faiz Oranı (%)"
+                       Keyboard="Numeric" />
+
+               
+                <Entry x:Name="VadeEntry"
+                       Placeholder="Vade (Ay)"
+                       Keyboard="Numeric" />
+
+               
+                <Label Text="Sonuçlar:" TextColor="Purple"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Start" />
+
+                <Label x:Name="AylikTaksitLabel" Text="Aylık Taksit: -" />
+                <Label x:Name="ToplamOdemeLabel" Text="Toplam Ödeme: -" />
+                <Label x:Name="ToplamFaizLabel" Text="Toplam Faiz: -" />
+
+               
+                <Button Text="Hesapla"
+                        BackgroundColor="Purple"
+                        TextColor="White"
+                        Clicked="Hesapla_Clicked" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+

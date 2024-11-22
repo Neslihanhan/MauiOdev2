@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Deneme1.RenkSecici"
+             Title="RenkSecici"
+             BackgroundColor="HotPink"
+             >
+    <ScrollView>
+        <StackLayout Spacing="20">
+
+           
+            <Label Text="-Renk Seçici-" 
+                   FontSize="40"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            
+            <Frame BorderColor="LightPink"
+                   BackgroundColor="LightPink"
+                   Padding="15"
+                   HasShadow="True"
+                   CornerRadius="10"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Start">
+                <StackLayout Spacing="15">
+                  
+                    <Label Text="Kırmızı" TextColor="Red"
+                           FontSize="20"
+                           HorizontalOptions="Center" />
+                    <Slider x:Name="RedSlider"
+                            Minimum="0"
+                            Maximum="255"
+                            ValueChanged="OnSliderValueChanged"
+                            VerticalOptions="Start" />
+
+                    
+                    <Label Text="Yeşil" TextColor="Green"
+                           FontSize="20"
+                           HorizontalOptions="Center" />
+                    <Slider x:Name="GreenSlider"
+                            Minimum="0"
+                            Maximum="255"
+                            ValueChanged="OnSliderValueChanged"
+                            VerticalOptions="Start" />
+
+                    
+                    <Label Text="Mavi" TextColor="Blue"
+                           FontSize="20"
+                           HorizontalOptions="Center" />
+                    <Slider x:Name="BlueSlider"
+                            Minimum="0"
+                            Maximum="255"
+                            ValueChanged="OnSliderValueChanged"
+                            VerticalOptions="Start" />
+                </StackLayout>
+            </Frame>
+
+            
+            <BoxView x:Name="ColorBox"
+                     HeightRequest="200"
+                     WidthRequest="500"
+                     Margin="0,20,0,20"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     BackgroundColor="Black" />
+
+            
+            <Label x:Name="HexColorLabel"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+
+            <Button Text="Rastgele Renk" Clicked="OnRandomColorButtonClicked" 
+                    BackgroundColor="#FFBC8F8F" TextColor="White" />
+
+
+            <Button x:Name="CopyHexButton"
+                    Text="Hex Kodunu Kopyala"
+                    BackgroundColor="Purple"
+                    TextColor="White"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Clicked="OnCopyHexButtonClicked" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
